@@ -123,7 +123,7 @@ public class apdSymptoms extends JFrame {
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				symptoms.disorderResult frame = new symptoms.disorderResult();
+				pages.disorderResult frame = new pages.disorderResult();
 				frame.setModalExclusionType(null);
 				frame.setVisible(true);
 				dispose();
