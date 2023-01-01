@@ -68,58 +68,70 @@ public class ocdSymptoms extends JFrame {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(188, 143, 143)));
 		panel_1.setBackground(new Color(255, 250, 250));
-		panel_1.setBounds(84, 112, 678, 384);
+		panel_1.setBounds(96, 102, 739, 362);
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
 		JCheckBox checkBox_ocdS1 = new JCheckBox("Fear of germs, dirt, or illness");
-		checkBox_ocdS1.setBounds(91, 36, 334, 29);
+		checkBox_ocdS1.setBounds(11, 33, 334, 29);
 		panel_1.add(checkBox_ocdS1);
 		
 		JCheckBox checkBox_ocdS2 = new JCheckBox("Fear of making a mistake.");
-		checkBox_ocdS2.setBounds(91, 75, 334, 29);
+		checkBox_ocdS2.setBounds(11, 70, 334, 29);
 		panel_1.add(checkBox_ocdS2);
 		
 		JCheckBox checkBox_ocdS3 = new JCheckBox("Fear for your health and safety");
-		checkBox_ocdS3.setBounds(91, 112, 334, 29);
+		checkBox_ocdS3.setBounds(11, 106, 334, 29);
 		panel_1.add(checkBox_ocdS3);
 		
 		JCheckBox checkBox_ocdS4 = new JCheckBox("Excessive need for order, neatness, symmetry, or perfection");
-		checkBox_ocdS4.setBounds(91, 145, 334, 29);
+		checkBox_ocdS4.setBounds(11, 143, 334, 29);
 		panel_1.add(checkBox_ocdS4);
 		
 		JCheckBox checkBox_ocdS5 = new JCheckBox("Repeated actions (rituals), such as hand washing frequently, checking certain things repeatedly");
-		checkBox_ocdS5.setBounds(91, 180, 566, 29);
+		checkBox_ocdS5.setBounds(11, 180, 707, 29);
 		panel_1.add(checkBox_ocdS5);
 		
 		JCheckBox checkBox_ocdS6 = new JCheckBox("Fear of saying something offensive or obscene");
-		checkBox_ocdS6.setBounds(91, 230, 334, 29);
+		checkBox_ocdS6.setBounds(11, 217, 334, 29);
 		panel_1.add(checkBox_ocdS6);
 		
 		JCheckBox checkBox_ocdS7 = new JCheckBox("Fear of being stolen or polluted");
-		checkBox_ocdS7.setBounds(91, 267, 334, 29);
+		checkBox_ocdS7.setBounds(11, 257, 334, 29);
 		panel_1.add(checkBox_ocdS7);
 		
 		JButton btnWhy = new JButton("WHY?");
+		btnWhy.setBounds(224, 309, 95, 29);
+		panel_1.add(btnWhy);
 		btnWhy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "System will...");
 			}
 		});
-		btnWhy.setBounds(203, 328, 115, 29);
-		panel_1.add(btnWhy);
 		
 		JButton btnHow = new JButton("HOW?");
+		btnHow.setBounds(386, 309, 95, 29);
+		panel_1.add(btnHow);
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Please select...");
 			}
 		});
-		btnHow.setBounds(381, 328, 115, 29);
-		panel_1.add(btnHow);
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(15, 481, 84, 29);
+		panel.add(btnBack);
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				symptoms.anxietySymptoms frame = new symptoms.anxietySymptoms();
+				frame.setModalExclusionType(null);
+				frame.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JButton btnNext = new JButton("Next");
-		btnNext.setBounds(809, 481, 115, 29);
+		btnNext.setBounds(809, 481, 84, 29);
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

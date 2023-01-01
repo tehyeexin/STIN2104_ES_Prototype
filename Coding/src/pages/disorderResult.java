@@ -49,6 +49,8 @@ public class disorderResult extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		
+		
 		JLabel lblTitle = new JLabel("Psychological Disorder Diagnosis Expert System");
 		lblTitle.setBounds(297, 56, 418, 20);
 		panel.add(lblTitle);
@@ -63,20 +65,23 @@ public class disorderResult extends JFrame {
 		lblResult.setBounds(186, 198, 544, 39);
 		panel.add(lblResult);
 		
+		JLabel lblDisorder = new JLabel("Disorder");
+		lblDisorder.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDisorder.setBounds(419, 253, 69, 20);
+		panel.add(lblDisorder);
+		
 		JLabel lblExplain = new JLabel("Explain");
 		lblExplain.setHorizontalAlignment(SwingConstants.CENTER);
 		lblExplain.setBounds(245, 279, 418, 39);
 		panel.add(lblExplain);
 		
 		JButton btnNext = new JButton("Next");
-		btnNext.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNext.setBounds(392, 409, 138, 29);
+		btnNext.setBounds(419, 407, 84, 29);
 		panel.add(btnNext);
 		
-//		if{
+//		symptoms.anxietySymptoms anxiety = new symptoms.anxietySymptoms();
+//		
+//		if(symtomps.anxietySymptoms.){
 //			int a = 1;
 //			JLabel lblResult1 = new JLabel("Based on the symptoms you provided, we found that you have psychological disorder which is ...");
 //			lblResult = lblResult1;
@@ -116,8 +121,5 @@ public class disorderResult extends JFrame {
 //				}
 //			});
 //		}
-		
-
 	}
-
 }

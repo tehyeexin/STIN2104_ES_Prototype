@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
@@ -24,8 +25,9 @@ public class personalInfo extends JFrame {
 	protected static JTextField textField_name;
 	protected static JTextField textField_phone;
 	protected static JTextField textField_age;
-	protected static JTextField textField_gender;
 	protected static JTextField textField_occupation;
+	private JRadioButton rdbtnMale;
+	private JRadioButton rdbtnFemale;
 
 	/**
 	 * Launch the application.
@@ -74,7 +76,7 @@ public class personalInfo extends JFrame {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(188, 143, 143)));
 		panel_1.setBackground(new Color(255, 250, 250));
-		panel_1.setBounds(30, 102, 448, 334);
+		panel_1.setBounds(30, 102, 448, 240);
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -86,7 +88,7 @@ public class personalInfo extends JFrame {
 		
 		textField_name = new JTextField();
 		textField_name.setBackground(new Color(245, 255, 250));
-		textField_name.setBounds(111, 16, 206, 26);
+		textField_name.setBounds(121, 16, 206, 26);
 		textField_name.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		textField_name.setColumns(10);
 		panel_1.add(textField_name);
@@ -99,7 +101,7 @@ public class personalInfo extends JFrame {
 		
 		textField_phone = new JTextField();
 		textField_phone.setBackground(new Color(245, 255, 250));
-		textField_phone.setBounds(111, 59, 206, 26);
+		textField_phone.setBounds(121, 59, 206, 26);
 		textField_phone.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		textField_phone.setColumns(10);
 		panel_1.add(textField_phone);
@@ -112,7 +114,7 @@ public class personalInfo extends JFrame {
 		
 		textField_age = new JTextField();
 		textField_age.setBackground(new Color(245, 255, 250));
-		textField_age.setBounds(111, 101, 206, 26);
+		textField_age.setBounds(121, 101, 206, 26);
 		textField_age.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		textField_age.setColumns(10);
 		panel_1.add(textField_age);
@@ -123,12 +125,17 @@ public class personalInfo extends JFrame {
 		lblGender.setFont(new Font("Dubai", Font.PLAIN, 20));
 		panel_1.add(lblGender);
 		
-		textField_gender = new JTextField();
-		textField_gender.setBackground(new Color(245, 255, 250));
-		textField_gender.setBounds(111, 143, 206, 26);
-		textField_gender.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
-		textField_gender.setColumns(10);
-		panel_1.add(textField_gender);
+		rdbtnMale = new JRadioButton("Male");
+		rdbtnMale.setForeground(new Color(139, 69, 19));
+		rdbtnMale.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		rdbtnMale.setBounds(121, 140, 96, 29);
+		panel_1.add(rdbtnMale);
+		
+		rdbtnFemale = new JRadioButton("Female");
+		rdbtnFemale.setForeground(new Color(139, 69, 19));
+		rdbtnFemale.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		rdbtnFemale.setBounds(224, 140, 101, 29);
+		panel_1.add(rdbtnFemale);
 		
 		JLabel lblOccupation = new JLabel("Occupation");
 		lblOccupation.setBounds(15, 186, 128, 26);
@@ -138,13 +145,25 @@ public class personalInfo extends JFrame {
 		
 		textField_occupation = new JTextField();
 		textField_occupation.setBackground(new Color(245, 255, 250));
-		textField_occupation.setBounds(202, 185, 206, 26);
+		textField_occupation.setBounds(121, 185, 206, 26);
 		textField_occupation.setColumns(10);
 		textField_occupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		panel_1.add(textField_occupation);
 		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(15, 481, 84, 29);
+		panel.add(btnBack);
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				startPage frame = new startPage();
+				frame.setModalExclusionType(null);
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		
 		JButton btnNext = new JButton("Next");
-		btnNext.setBounds(809, 481, 115, 29);
+		btnNext.setBounds(809, 481, 84, 29);
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

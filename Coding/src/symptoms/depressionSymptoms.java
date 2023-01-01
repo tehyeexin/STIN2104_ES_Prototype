@@ -68,58 +68,70 @@ public class depressionSymptoms extends JFrame {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(188, 143, 143)));
 		panel_1.setBackground(new Color(255, 250, 250));
-		panel_1.setBounds(84, 112, 678, 384);
+		panel_1.setBounds(116, 102, 678, 374);
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
 		JCheckBox checkBox_depS1 = new JCheckBox("Feelings of sadness, tearfulness, emptiness or hopelessness");
-		checkBox_depS1.setBounds(91, 36, 334, 29);
+		checkBox_depS1.setBounds(23, 22, 334, 29);
 		panel_1.add(checkBox_depS1);
 		
 		JCheckBox checkBox_depS2 = new JCheckBox("Angry outbursts, irritability or frustration, even over small matters");
-		checkBox_depS2.setBounds(91, 75, 334, 29);
+		checkBox_depS2.setBounds(23, 59, 334, 29);
 		panel_1.add(checkBox_depS2);
 		
 		JCheckBox checkBox_depS3 = new JCheckBox("Loss of interest in hobbies and interests you once enjoyed");
-		checkBox_depS3.setBounds(91, 112, 334, 29);
+		checkBox_depS3.setBounds(23, 96, 334, 29);
 		panel_1.add(checkBox_depS3);
 		
 		JCheckBox checkBox_depS4 = new JCheckBox("Sleep disturbances, including insomnia or sleeping too much");
-		checkBox_depS4.setBounds(91, 145, 334, 29);
+		checkBox_depS4.setBounds(23, 133, 334, 29);
 		panel_1.add(checkBox_depS4);
 		
 		JCheckBox checkBox_depS5 = new JCheckBox("Feelings of worthlessness or guilt, fixating on past failures or self-blame");
-		checkBox_depS5.setBounds(91, 180, 334, 29);
+		checkBox_depS5.setBounds(23, 170, 334, 29);
 		panel_1.add(checkBox_depS5);
 		
 		JCheckBox checkBox_depS6 = new JCheckBox("Trouble thinking, concentrating, making decisions, and remembering things");
-		checkBox_depS6.setBounds(91, 230, 334, 29);
+		checkBox_depS6.setBounds(23, 207, 334, 29);
 		panel_1.add(checkBox_depS6);
 		
 		JCheckBox checkBox_depS7 = new JCheckBox("Frequent or recurrent thoughts of death, suicidal thoughts, suicide attempts or suicide");
-		checkBox_depS7.setBounds(91, 267, 334, 29);
+		checkBox_depS7.setBounds(23, 244, 334, 29);
 		panel_1.add(checkBox_depS7);
 		
 		JButton btnWhy = new JButton("WHY?");
+		btnWhy.setBounds(222, 328, 95, 29);
+		panel_1.add(btnWhy);
 		btnWhy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "System will...");
 			}
 		});
-		btnWhy.setBounds(203, 328, 115, 29);
-		panel_1.add(btnWhy);
 		
 		JButton btnHow = new JButton("HOW?");
+		btnHow.setBounds(381, 328, 95, 29);
+		panel_1.add(btnHow);
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Please select...");
 			}
 		});
-		btnHow.setBounds(381, 328, 115, 29);
-		panel_1.add(btnHow);
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(15, 481, 84, 29);
+		panel.add(btnBack);
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				symptoms.schizophreniaSymptoms frame = new symptoms.schizophreniaSymptoms();
+				frame.setModalExclusionType(null);
+				frame.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JButton btnNext = new JButton("Next");
-		btnNext.setBounds(809, 481, 115, 29);
+		btnNext.setBounds(809, 481, 84, 29);
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

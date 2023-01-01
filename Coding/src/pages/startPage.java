@@ -11,6 +11,7 @@ import javax.swing.JInternalFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class startPage extends JFrame {
 
@@ -50,19 +51,22 @@ public class startPage extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblWelcome = new JLabel("Welcome");
-		lblWelcome.setBounds(444, 114, 69, 20);
+		lblWelcome.setHorizontalAlignment(SwingConstants.CENTER);
+		lblWelcome.setBounds(427, 152, 69, 20);
 		panel.add(lblWelcome);
 		
 		JLabel lblTitle = new JLabel("Psychological Disorder Diagnosis Expert System");
-		lblTitle.setBounds(297, 62, 418, 20);
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setBounds(260, 64, 418, 20);
 		panel.add(lblTitle);
 		
 		JLabel lblAbout = new JLabel("This expert system is...");
-		lblAbout.setBounds(374, 180, 229, 73);
+		lblAbout.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAbout.setBounds(332, 237, 268, 29);
 		panel.add(lblAbout);
 		
 		JButton btnStart = new JButton("Start");
-		btnStart.setBounds(398, 365, 115, 29);
+		btnStart.setBounds(425, 367, 84, 29);
 		panel.add(btnStart);
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

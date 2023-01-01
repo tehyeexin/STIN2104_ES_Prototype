@@ -71,7 +71,7 @@ public class pMedicalHistory extends JFrame {
 		
 		//personal medical history
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(144, 84, 716, 213);
+		panel_1.setBounds(128, 106, 716, 247);
 		panel.add(panel_1);
 		panel_1.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(188, 143, 143)));
 		panel_1.setBackground(new Color(255, 250, 250));
@@ -83,7 +83,7 @@ public class pMedicalHistory extends JFrame {
 		lblPersonal.setFont(new Font("Dubai", Font.PLAIN, 20));
 		
 		JLabel lblQ1 = new JLabel("Do you have a history of psychological illness?");
-		lblQ1.setBounds(28, 42, 353, 26);
+		lblQ1.setBounds(28, 42, 479, 26);
 		lblQ1.setForeground(new Color(139, 69, 19));
 		lblQ1.setFont(new Font("Dubai", Font.PLAIN, 20));
 		panel_1.add(lblQ1);
@@ -91,13 +91,13 @@ public class pMedicalHistory extends JFrame {
 		rdbtnYes = new JRadioButton("Yes");
 		rdbtnYes.setForeground(new Color(139, 69, 19));
 		rdbtnYes.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		rdbtnYes.setBounds(65, 80, 129, 29);
+		rdbtnYes.setBounds(28, 80, 129, 29);
 		panel_1.add(rdbtnYes);
 		
 		rdbtnNo = new JRadioButton("No");
 		rdbtnNo.setForeground(new Color(139, 69, 19));
 		rdbtnNo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		rdbtnNo.setBounds(229, 80, 91, 29);
+		rdbtnNo.setBounds(190, 80, 91, 29);
 		panel_1.add(rdbtnNo);
 		
 		rdbtnYes.addActionListener(new ActionListener() {
@@ -117,22 +117,32 @@ public class pMedicalHistory extends JFrame {
 		});
 		
 		JLabel lblQ2 = new JLabel("If yes, please state the psychological illness : ");
-		lblQ2.setBounds(15, 133, 336, 26);
+		lblQ2.setBounds(28, 133, 479, 26);
 		lblQ2.setForeground(new Color(139, 69, 19));
 		lblQ2.setFont(new Font("Dubai", Font.PLAIN, 20));
 		panel_1.add(lblQ2);
 		
 		textField_illness = new JTextField();
 		textField_illness.setBackground(new Color(245, 255, 250));
-		textField_illness.setBounds(15, 175, 206, 26);
+		textField_illness.setBounds(28, 175, 479, 26);
 		textField_illness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
 		textField_illness.setColumns(10);
 		panel_1.add(textField_illness);
 		
-		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(15, 481, 84, 29);
+		panel.add(btnBack);
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				personalInfo frame = new personalInfo();
+				frame.setModalExclusionType(null);
+				frame.setVisible(true);
+				dispose();
+			}
+		});
 		
 		JButton btnNext = new JButton("Next");
-		btnNext.setBounds(809, 481, 115, 29);
+		btnNext.setBounds(809, 481, 84, 29);
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
