@@ -16,13 +16,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import java.awt.SystemColor;
 
 public class pMedicalHistory extends JFrame {
 
 	private JPanel contentPane;
-	private JRadioButton rdbtnYes;
-	private JRadioButton rdbtnNo;
-	private JTextField textField_illness;
+	public static JRadioButton rdbtnYes;
+	public static JRadioButton rdbtnNo;
+	public static JTextField textField_illness;
 
 	/**
 	 * Launch the application.
@@ -45,6 +46,7 @@ public class pMedicalHistory extends JFrame {
 	 */
 	public pMedicalHistory() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Psychological Disorder Diagnosis Expert System");
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -52,58 +54,56 @@ public class pMedicalHistory extends JFrame {
 		setContentPane(contentPane);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(255, 248, 220));
 		panel.setBorder(null);
 		panel.setBounds(0, 0, 949, 536);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblTitle = new JLabel("Medical History");
+		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setBounds(292, 16, 369, 47);
 		panel.add(lblTitle);
 		
-		JLabel lblInfo = new JLabel("Please provide us with your psychological medical history.");
-		lblInfo.setForeground(new Color(160, 82, 45));
-		lblInfo.setFont(new Font("Dubai", Font.PLAIN, 20));
-		lblInfo.setBounds(230, 58, 463, 27);
-		panel.add(lblInfo);
+		JLabel lblInst = new JLabel("Please provide us with your psychological medical history.");
+		lblInst.setForeground(Color.BLACK);
+		lblInst.setFont(new Font("Yu Gothic UI", Font.PLAIN, 16));
+		lblInst.setBounds(115, 91, 518, 27);
+		panel.add(lblInst);
 		
-		
-		//personal medical history
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(128, 106, 716, 247);
-		panel.add(panel_1);
 		panel_1.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(188, 143, 143)));
-		panel_1.setBackground(new Color(255, 250, 250));
+		panel_1.setBackground(new Color(255, 240, 245));
+		panel_1.setBounds(115, 134, 702, 253);
+		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblPersonal = new JLabel("Perosnal");
-		lblPersonal.setBounds(28, 0, 89, 26);
-		lblPersonal.setForeground(new Color(139, 69, 19));
-		lblPersonal.setFont(new Font("Dubai", Font.PLAIN, 20));
-		
 		JLabel lblQ1 = new JLabel("Do you have a history of psychological illness?");
-		lblQ1.setBounds(28, 42, 479, 26);
-		lblQ1.setForeground(new Color(139, 69, 19));
-		lblQ1.setFont(new Font("Dubai", Font.PLAIN, 20));
+		lblQ1.setBounds(43, 39, 479, 29);
+		lblQ1.setForeground(SystemColor.desktop);
+		lblQ1.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel_1.add(lblQ1);
 		
 		rdbtnYes = new JRadioButton("Yes");
-		rdbtnYes.setForeground(new Color(139, 69, 19));
+		rdbtnYes.setBackground(new Color(255, 240, 245));
+		rdbtnYes.setForeground(SystemColor.desktop);
 		rdbtnYes.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		rdbtnYes.setBounds(28, 80, 129, 29);
+		rdbtnYes.setBounds(43, 80, 80, 29);
 		panel_1.add(rdbtnYes);
 		
 		rdbtnNo = new JRadioButton("No");
-		rdbtnNo.setForeground(new Color(139, 69, 19));
+		rdbtnNo.setBackground(new Color(255, 240, 245));
+		rdbtnNo.setForeground(SystemColor.desktop);
 		rdbtnNo.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		rdbtnNo.setBounds(190, 80, 91, 29);
+		rdbtnNo.setBounds(131, 80, 91, 29);
 		panel_1.add(rdbtnNo);
 		
 		rdbtnYes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnYes.isSelected()) {
 					rdbtnNo.setSelected(false);
+					textField_illness.setEditable(true);
 				}
 			}
 		});
@@ -112,25 +112,29 @@ public class pMedicalHistory extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNo.isSelected()) {
 					rdbtnYes.setSelected(false);
+					textField_illness.setEditable(false);
+					textField_illness.setText("");
 				}
 			}
 		});
 		
 		JLabel lblQ2 = new JLabel("If yes, please state the psychological illness : ");
-		lblQ2.setBounds(28, 133, 479, 26);
-		lblQ2.setForeground(new Color(139, 69, 19));
-		lblQ2.setFont(new Font("Dubai", Font.PLAIN, 20));
+		lblQ2.setBounds(43, 130, 479, 29);
+		lblQ2.setForeground(SystemColor.desktop);
+		lblQ2.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel_1.add(lblQ2);
 		
 		textField_illness = new JTextField();
 		textField_illness.setBackground(new Color(245, 255, 250));
-		textField_illness.setBounds(28, 175, 479, 26);
-		textField_illness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 15));
+		textField_illness.setBounds(43, 176, 479, 29);
+		textField_illness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		textField_illness.setColumns(10);
 		panel_1.add(textField_illness);
 		
 		JButton btnBack = new JButton("Back");
-		btnBack.setBounds(15, 481, 84, 29);
+		btnBack.setBackground(new Color(255, 240, 245));
+		btnBack.setFont(new Font("Yu Gothic UI", Font.BOLD, 16));
+		btnBack.setBounds(364, 481, 84, 29);
 		panel.add(btnBack);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -142,7 +146,9 @@ public class pMedicalHistory extends JFrame {
 		});
 		
 		JButton btnNext = new JButton("Next");
-		btnNext.setBounds(809, 481, 84, 29);
+		btnNext.setBackground(new Color(255, 240, 245));
+		btnNext.setFont(new Font("Yu Gothic UI", Font.BOLD, 16));
+		btnNext.setBounds(501, 481, 84, 29);
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
