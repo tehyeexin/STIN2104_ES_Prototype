@@ -97,7 +97,7 @@ public class ocdReport extends JFrame {
 		panel.add(txtrReport);
 		txtrReport.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
 		txtrReport.setText("\t\t            Patient's Information"
-				+ "\r\n\nName: Mr./Mrs. " + pages.personalInfo.textField_name.getText()
+				+ "\r\n\nName: Mr./Ms. " + pages.personalInfo.textField_name.getText()
 				+ "\r\nPhone no: " + pages.personalInfo.textField_phone.getText()
 				+ "\r\nAge: " + pages.personalInfo.textField_age.getText()
 				+ "\r\nGender: " + pGender

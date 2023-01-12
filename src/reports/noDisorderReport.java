@@ -67,7 +67,7 @@ public class noDisorderReport extends JFrame {
 		lblTitle.setBounds(93, 16, 753, 47);
 		panel.add(lblTitle);
 		
-		JLabel lblInst1 = new JLabel("This is an auto-generated report. You may take this report to the therapist.");
+		JLabel lblInst1 = new JLabel("This is an auto-generated report.");
 		lblInst1.setFont(new Font("Yu Gothic UI", Font.PLAIN, 16));
 		lblInst1.setBounds(136, 75, 537, 29);
 		panel.add(lblInst1);
