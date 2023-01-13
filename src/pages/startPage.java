@@ -19,6 +19,7 @@ import java.awt.SystemColor;
 import javax.swing.border.MatteBorder;
 import javax.swing.ImageIcon;
 import javax.swing.JTextArea;
+import javax.swing.ImageIcon;
 
 public class startPage extends JFrame {
 
@@ -58,8 +59,7 @@ public class startPage extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Asus\\OneDrive - UNIVERSITY UTARA MALAYSIA\\Desktop\\Psychological Images\\icon.png"));
+		JLabel lblNewLabel = new JLabel(new ImageIcon(getClass().getResource("/images/icon.png")));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(414, 16, 120, 120);
 		panel.add(lblNewLabel);

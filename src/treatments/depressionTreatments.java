@@ -59,7 +59,7 @@ public class depressionTreatments extends JFrame {
 		JLabel lblTitle = new JLabel("Treatments for Depression");
 		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(263, 16, 398, 47);
+		lblTitle.setBounds(279, 16, 382, 47);
 		panel.add(lblTitle);
 		
 		JLabel lblInst = new JLabel("Here is the treatments for Depression that are recommended for you.");

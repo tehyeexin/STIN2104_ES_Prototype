@@ -90,8 +90,7 @@ public class noDisorderResult extends JFrame {
 		lblDisorder.setBounds(103, 170, 200, 39);
 		panel_1.add(lblDisorder);
 		
-		JLabel lblImage = new JLabel("");
-		lblImage.setIcon(new ImageIcon("C:\\Users\\Asus\\OneDrive - UNIVERSITY UTARA MALAYSIA\\Desktop\\Psychological Images\\noDisorder.png"));
+		JLabel lblImage = new JLabel(new ImageIcon(getClass().getResource("/images/noDisorder.png")));
 		lblImage.setBounds(442, 30, 330, 216);
 		panel_1.add(lblImage);
 		

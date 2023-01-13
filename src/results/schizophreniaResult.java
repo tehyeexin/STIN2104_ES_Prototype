@@ -90,8 +90,7 @@ public class schizophreniaResult extends JFrame {
 		txtrExplain.setEditable(false);
 		panel_1.add(txtrExplain);
 		
-		JLabel lblImage = new JLabel("");
-		lblImage.setIcon(new ImageIcon("C:\\Users\\Asus\\OneDrive - UNIVERSITY UTARA MALAYSIA\\Desktop\\Psychological Images\\schizophrenia.png"));
+		JLabel lblImage = new JLabel(new ImageIcon(getClass().getResource("/images/schizophrenia.png")));
 		lblImage.setBounds(442, 30, 330, 216);
 		panel_1.add(lblImage);
 		

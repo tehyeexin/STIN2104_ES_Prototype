@@ -59,7 +59,7 @@ public class schizophreniaTreatments extends JFrame {
 		JLabel lblTitle = new JLabel("Treatments for Schizophrenia");
 		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(263, 16, 398, 47);
+		lblTitle.setBounds(273, 16, 388, 47);
 		panel.add(lblTitle);
 		
 		JLabel lblInst = new JLabel("Here is the treatments for Schizophrenia that are recommended for you.");

@@ -59,7 +59,7 @@ public class ocdTreatments extends JFrame {
 		JLabel lblTitle = new JLabel("Treatments for Obsessive-Compulsive Disorder");
 		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(173, 16, 561, 47);
+		lblTitle.setBounds(198, 16, 542, 47);
 		panel.add(lblTitle);
 		
 		JLabel lblInst = new JLabel("Here is the treatments for Obsessive-Compulsive Disorder that are recommended for you.");

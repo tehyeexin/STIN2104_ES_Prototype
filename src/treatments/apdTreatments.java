@@ -59,7 +59,7 @@ public class apdTreatments extends JFrame {
 		JLabel lblTitle = new JLabel("Treatments for Antisocial Personality Disorder");
 		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 25));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(198, 16, 537, 47);
+		lblTitle.setBounds(209, 16, 526, 47);
 		panel.add(lblTitle);
 		
 		JLabel lblInst = new JLabel("Here is the treatments for Antisocial Personality Disorder that are recommended for you.");

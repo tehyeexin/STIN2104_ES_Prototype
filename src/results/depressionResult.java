@@ -90,8 +90,7 @@ public class depressionResult extends JFrame {
 		txtrExplain.setEditable(false);
 		panel_1.add(txtrExplain);
 		
-		JLabel lblImage = new JLabel("");
-		lblImage.setIcon(new ImageIcon("C:\\Users\\Asus\\OneDrive - UNIVERSITY UTARA MALAYSIA\\Desktop\\Psychological Images\\depression.png"));
+		JLabel lblImage = new JLabel(new ImageIcon(getClass().getResource("/images/depression.png")));
 		lblImage.setBounds(442, 30, 330, 216);
 		panel_1.add(lblImage);
 		
