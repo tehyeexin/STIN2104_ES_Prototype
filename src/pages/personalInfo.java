@@ -140,7 +140,7 @@ public class personalInfo extends JFrame {
 		rdbtnMale.setBackground(new Color(255, 240, 245));
 		rdbtnMale.setForeground(SystemColor.desktop);
 		rdbtnMale.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		rdbtnMale.setBounds(144, 200, 96, 29);
+		rdbtnMale.setBounds(142, 200, 85, 29);
 		panel_1.add(rdbtnMale);
 		
 		rdbtnFemale = new JRadioButton("Female");
@@ -167,14 +167,14 @@ public class personalInfo extends JFrame {
 		});
 		
 		JLabel lblOccupation = new JLabel("Occupation");
-		lblOccupation.setBounds(27, 258, 101, 26);
+		lblOccupation.setBounds(27, 258, 116, 26);
 		lblOccupation.setForeground(Color.BLACK);
 		lblOccupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel_1.add(lblOccupation);
 		
 		textField_occupation = new JTextField();
 		textField_occupation.setBackground(new Color(245, 255, 250));
-		textField_occupation.setBounds(144, 257, 526, 29);
+		textField_occupation.setBounds(142, 257, 528, 29);
 		textField_occupation.setColumns(10);
 		textField_occupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel_1.add(textField_occupation);

@@ -120,7 +120,7 @@ public class ocdTreatments extends JFrame {
 		JLabel lblInst1 = new JLabel("Please click the button below to view the diagnostic report");
 		lblInst1.setFont(new Font("Yu Gothic UI", Font.PLAIN, 16));
 		lblInst1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblInst1.setBounds(275, 445, 402, 29);
+		lblInst1.setBounds(263, 445, 425, 29);
 		panel.add(lblInst1);
 			
 		JButton btnReport = new JButton("Report");
