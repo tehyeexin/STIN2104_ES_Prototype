@@ -48,7 +48,7 @@ public class famMedicalHistory extends JFrame {
 	 */
 	public famMedicalHistory() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Psychological Disorder Diagnosis Expert System");
+		setTitle("Psychological Disorders Diagnosis Expert System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(famMedicalHistory.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();

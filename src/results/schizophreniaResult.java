@@ -44,7 +44,7 @@ public class schizophreniaResult extends JFrame {
 	 */
 	public schizophreniaResult() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Psychological Disorder Diagnosis Expert System");
+		setTitle("Psychological Disorders Diagnosis Expert System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(schizophreniaResult.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
@@ -65,7 +65,7 @@ public class schizophreniaResult extends JFrame {
 		lblThank.setBounds(221, 26, 478, 29);
 		panel.add(lblThank);
 		
-		JLabel lblExplain1 = new JLabel("After diagnosing your symptoms, we found that you may have the following psychological disorders:");
+		JLabel lblExplain1 = new JLabel("After diagnosing your symptoms, we found that you may have the following psychological disorder:");
 		lblExplain1.setFont(new Font("Yu Gothic UI", Font.PLAIN, 18));
 		lblExplain1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblExplain1.setBounds(48, 61, 836, 39);

@@ -58,7 +58,7 @@ public class anxietySymptoms extends JFrame {
 	 */
 	public anxietySymptoms() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Psychological Disorder Diagnosis Expert System");
+		setTitle("Psychological Disorders Diagnosis Expert System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(anxietySymptoms.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
@@ -169,7 +169,7 @@ public class anxietySymptoms extends JFrame {
 		btnWhy.setFont(new Font("Yu Gothic UI", Font.BOLD, 16));
 		btnWhy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "These are the symptoms of psychological disorder, the system will try to diagnose based on your answer.");
+				JOptionPane.showMessageDialog(null, "These are the symptoms of psychological disorders, the system will try to diagnose based on your answer.");
 			}
 		});
 		

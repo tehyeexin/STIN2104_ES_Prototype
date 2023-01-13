@@ -49,7 +49,7 @@ public class apdReport extends JFrame {
 	 */
 	public apdReport() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Psychological Disorder Diagnosis Expert System");
+		setTitle("Psychological Disorders Diagnosis Expert System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(apdReport.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
@@ -64,7 +64,7 @@ public class apdReport extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblTitle = new JLabel("Psychological Disorder Diagnosis Expert System Diagnostic Report");
+		JLabel lblTitle = new JLabel("Psychological Disorders Diagnosis Expert System Diagnostic Report");
 		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 24));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setBounds(93, 16, 753, 47);
@@ -108,7 +108,8 @@ public class apdReport extends JFrame {
 				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + pages.pMedicalHistory.textField_illness.getText()
 				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.textField_famIllness.getText()
 				+ "\r\n----------------------------------------------------------------------------------------------"
-				+ "\r\n\t\t    Diagnose Result\r\n\nPatient's psychological disorder: Antisocial Personality Disorder (APD)"
+				+ "\r\n\t\t  Diagnostic Result"
+				+ "\r\n\nPatient's psychological disorder: Antisocial Personality Disorder (APD)"
 				+ "\r\nTreatments: Psychotherapy, Medication, Democratic therapeutic communities (DTC)\r\n");
 		txtrReport.setEditable(false);
 

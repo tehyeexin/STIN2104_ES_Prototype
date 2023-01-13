@@ -48,7 +48,7 @@ public class schizophreniaReport extends JFrame {
 	 */
 	public schizophreniaReport() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Psychological Disorder Diagnosis Expert System");
+		setTitle("Psychological Disorders Diagnosis Expert System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(schizophreniaReport.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
@@ -63,7 +63,7 @@ public class schizophreniaReport extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblTitle = new JLabel("Psychological Disorder Diagnosis Expert System Diagnostic Report");
+		JLabel lblTitle = new JLabel("Psychological Disorders Diagnosis Expert System Diagnostic Report");
 		lblTitle.setFont(new Font("Yu Gothic UI", Font.BOLD, 24));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setBounds(93, 16, 753, 47);
@@ -98,7 +98,7 @@ public class schizophreniaReport extends JFrame {
 		txtrReport.setBounds(79, 114, 767, 351);
 		panel.add(txtrReport);
 		txtrReport.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
-		txtrReport.setText("\t\t        Patient's Information"
+		txtrReport.setText("\t\t           Patient's Information"
 				+ "\r\n\nName: Mr./Ms. " + pages.personalInfo.textField_name.getText()
 				+ "\r\nPhone no: " + pages.personalInfo.textField_phone.getText()
 				+ "\r\nAge: " + pages.personalInfo.textField_age.getText()
@@ -107,7 +107,8 @@ public class schizophreniaReport extends JFrame {
 				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + pages.pMedicalHistory.textField_illness.getText()
 				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.textField_famIllness.getText()
 				+ "\r\n-------------------------------------------------------------------------------------------------------------"
-				+ "\r\n\t\t            Diagnose Result\r\n\nPatient's psychological disorder: Schizophrenia"
+				+ "\r\n\t\t             Diagnostic Result"
+				+ "\r\n\nPatient's psychological disorder: Schizophrenia"
 				+ "\r\nTreatments: Psychotherapy, Medication, Electroconvulsive therapy (ECT), Psychosocial interventions\r\n");
 		txtrReport.setEditable(false);
 
