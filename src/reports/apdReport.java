@@ -80,13 +80,13 @@ public class apdReport extends JFrame {
 		}
 		
 		if(pMedicalHistory.rdbtnYes.isSelected()) {
-			pHistory = "Yes";
+			pHistory = "Yes, ";
 		}
 		else if(pMedicalHistory.rdbtnNo.isSelected()) {
 			pHistory = "No";
 		}
 		if(famMedicalHistory.rdbtnYes.isSelected()) {
-			pFamHistory = "Yes";
+			pFamHistory = "Yes, ";
 		}
 		else if(famMedicalHistory.rdbtnNo.isSelected()) {
 			pFamHistory = "No";
@@ -102,8 +102,8 @@ public class apdReport extends JFrame {
 				+ "\r\nAge: " + pages.personalInfo.textField_age.getText()
 				+ "\r\nGender: " + pGender
 				+ "\r\nOccupation: " + pages.personalInfo.textField_occupation.getText()
-				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + ", " + pages.pMedicalHistory.textField_illness.getText()
-				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + ", " + pages.famMedicalHistory.textField_famIllness.getText()
+				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + pages.pMedicalHistory.textField_illness.getText()
+				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.textField_famIllness.getText()
 				+ "\r\n----------------------------------------------------------------------------------------------"
 				+ "\r\n\t\t    Diagnose Result\r\n\nPatient's psychological disorder: Antisocial Personality Disorder (APD)"
 				+ "\r\nTreatments: Psychotherapy, Medication, Democratic therapeutic communities (DTC)\r\n");

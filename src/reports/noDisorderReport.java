@@ -80,13 +80,13 @@ public class noDisorderReport extends JFrame {
 		}
 		
 		if(pMedicalHistory.rdbtnYes.isSelected()) {
-			pHistory = "Yes";
+			pHistory = "Yes, ";
 		}
 		else if(pMedicalHistory.rdbtnNo.isSelected()) {
 			pHistory = "No";
 		}
 		if(famMedicalHistory.rdbtnYes.isSelected()) {
-			pFamHistory = "Yes";
+			pFamHistory = "Yes, ";
 		}
 		else if(famMedicalHistory.rdbtnNo.isSelected()) {
 			pFamHistory = "No";
@@ -97,13 +97,13 @@ public class noDisorderReport extends JFrame {
 		panel.add(txtrReport);
 		txtrReport.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
 		txtrReport.setText("\t\tPatient's Information"
-				+ "\r\n\nName: Mr./Mrs. " + pages.personalInfo.textField_name.getText()
+				+ "\r\n\nName: Mr./Ms. " + pages.personalInfo.textField_name.getText()
 				+ "\r\nPhone no: " + pages.personalInfo.textField_phone.getText()
 				+ "\r\nAge: " + pages.personalInfo.textField_age.getText()
 				+ "\r\nGender: " + pGender
 				+ "\r\nOccupation: " + pages.personalInfo.textField_occupation.getText()
-				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + ", " + pages.pMedicalHistory.textField_illness.getText()
-				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + ", " + pages.famMedicalHistory.textField_famIllness.getText()
+				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + pages.pMedicalHistory.textField_illness.getText()
+				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.textField_famIllness.getText()
 				+ "\r\n----------------------------------------------------------------------------------------------"
 				+ "\r\n\t\t    Diagnose Result\r\n\nPatient's psychological disorder: Does not have any psychological disorder."
 				+ "\r\nTreatments: -\r\n");
