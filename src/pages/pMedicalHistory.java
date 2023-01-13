@@ -17,6 +17,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 
 public class pMedicalHistory extends JFrame {
 
@@ -47,6 +48,7 @@ public class pMedicalHistory extends JFrame {
 	public pMedicalHistory() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Psychological Disorder Diagnosis Expert System");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(pMedicalHistory.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

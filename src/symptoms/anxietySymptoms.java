@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,6 +26,7 @@ import javax.swing.event.ChangeListener;
 
 import pages.famMedicalHistory;
 import results.anxietyResult;
+import results.schizophreniaResult;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.JTextField;
@@ -57,6 +59,7 @@ public class anxietySymptoms extends JFrame {
 	public anxietySymptoms() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Psychological Disorder Diagnosis Expert System");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(anxietySymptoms.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

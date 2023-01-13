@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +19,7 @@ import javax.swing.border.EmptyBorder;
 import pages.famMedicalHistory;
 import pages.pMedicalHistory;
 import pages.personalInfo;
+import pages.startPage;
 
 public class apdReport extends JFrame {
 
@@ -48,6 +50,7 @@ public class apdReport extends JFrame {
 	public apdReport() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Psychological Disorder Diagnosis Expert System");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(apdReport.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

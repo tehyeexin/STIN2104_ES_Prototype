@@ -26,6 +26,7 @@ import pages.startPage;
 
 import javax.swing.JTextArea;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 
 public class anxietyReport extends JFrame {
 
@@ -56,6 +57,7 @@ public class anxietyReport extends JFrame {
 	public anxietyReport() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Psychological Disorder Diagnosis Expert System");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(anxietyReport.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
