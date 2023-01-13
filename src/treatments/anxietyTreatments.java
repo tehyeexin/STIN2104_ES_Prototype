@@ -47,7 +47,7 @@ public class anxietyTreatments extends JFrame {
 	 */
 	public anxietyTreatments() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Psychological Disorder Diagnosis Expert System");
+		setTitle("Psychological Disorders Diagnosis Expert System");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(anxietyTreatments.class.getResource("/images/icon.png")));
 		setBounds(100, 100, 971, 592);
 		contentPane = new JPanel();
