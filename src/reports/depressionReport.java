@@ -96,7 +96,7 @@ public class depressionReport extends JFrame {
 		}
 		
 		JTextArea txtrReport = new JTextArea();
-		txtrReport.setBounds(136, 100, 665, 365);
+		txtrReport.setBounds(136, 114, 665, 351);
 		panel.add(txtrReport);
 		txtrReport.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
 		txtrReport.setText("\t\tPatient's Information"
@@ -109,8 +109,7 @@ public class depressionReport extends JFrame {
 				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.textField_famIllness.getText()
 				+ "\r\n----------------------------------------------------------------------------------------------"
 				+ "\r\n\t\t  Diagnostic Result"
-				+ "\r\n\nPatient's psychological disorder: Depression\r\nTreatments: Psychotherapy, Medication, Electroconvulsive therapy (ECT), "
-				+ "\r\n                   Transcranial magnetic stimulation (TMS), Complementary therapy\r\n");
+				+ "\r\n\nPatient's psychological disorder: Depression\r\nTreatments: Psychotherapy, Medication, Brain stimulation therapy\r\n");
 		txtrReport.setEditable(false);
 
 		JButton btnPrint = new JButton("Print");
