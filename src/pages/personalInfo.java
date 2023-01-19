@@ -176,7 +176,7 @@ public class personalInfo extends JFrame {
 		cmBox_occupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		cmBox_occupation.setBounds(142, 258, 528, 29);
 		panel_1.add(cmBox_occupation);
-		cmBox_occupation.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Professional", "Government Service / Public Sector", "Private Sector Service", "Business", "Housewife", "Student", "Retired", "Self-employed", "Unemployed"}));
+		cmBox_occupation.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Professional", "Government Service / Public Sector", "Private Sector Service", "Business", "Housewife", "Student", "Retired", "Self-employed", "Unemployed", "Others"}));
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBackground(new Color(255, 240, 245));

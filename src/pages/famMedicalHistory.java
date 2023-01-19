@@ -133,8 +133,8 @@ public class famMedicalHistory extends JFrame {
 					rdbtnNo.setSelected(false);
 					cmBox_famIllness.setEnabled(true);
 					cmBox_relationship.setEnabled(true);
-					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Anxiety", "Obssesive-Compulsive Disorder", "Depression", "Schizophrenia", "Antisocial Personality Disorder"}));
-					cmBox_relationship.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Father", "Mother", "Aunt", "Uncle", "Grandmother", "Grandfather"}));
+					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Anxiety", "Obssesive-Compulsive Disorder", "Depression", "Schizophrenia", "Antisocial Personality Disorder", "Others"}));
+					cmBox_relationship.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Father", "Mother", "Aunt", "Uncle", "Grandfather", "Grandmother", "Brother", "Sister"}));
 				}
 				else {
 					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {""}));

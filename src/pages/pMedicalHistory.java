@@ -120,7 +120,7 @@ public class pMedicalHistory extends JFrame {
 				if(rdbtnYes.isSelected()) {
 					rdbtnNo.setSelected(false);
 					cmBox_illness.setEnabled(true);
-					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Anxiety", "Obssesive-Compulsive Disorder", "Depression", "Schizophrenia", "Antisocial Personality Disorder"}));
+					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Anxiety", "Obssesive-Compulsive Disorder", "Depression", "Schizophrenia", "Antisocial Personality Disorder", "Others"}));
 				}
 				else {
 					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {""}));
