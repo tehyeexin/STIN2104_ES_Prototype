@@ -122,7 +122,8 @@ public class apdResult extends JFrame {
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "The system diagnoses your psychological disorder based on the following symptoms:\n" 
-													+ symptoms.apdSymptoms.symptomsList);
+													+ symptoms.apdSymptoms.symptomsList
+													+"\n\nThese are the symptoms that constitute Antisocial Personality Disorder.");
 			}
 		});
 		

@@ -122,7 +122,8 @@ public class depressionResult extends JFrame {
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "The system diagnoses your psychological disorder based on the following symptoms:\n" 
-													+ symptoms.depressionSymptoms.symptomsList);
+													+ symptoms.depressionSymptoms.symptomsList
+													+"\n\nThese are the symptoms that constitute Depression.");
 			}
 		});
 		

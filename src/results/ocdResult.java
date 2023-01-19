@@ -122,7 +122,8 @@ public class ocdResult extends JFrame {
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "The system diagnoses your psychological disorder based on the following symptoms:\n" 
-													+ symptoms.ocdSymptoms.symptomsList);
+													+ symptoms.ocdSymptoms.symptomsList
+													+"\n\nThese are the symptoms that constitute Obsessive-Compulsive Disorder.");
 			}
 		});
 		

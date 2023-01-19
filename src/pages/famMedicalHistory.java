@@ -9,7 +9,9 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,8 +26,7 @@ public class famMedicalHistory extends JFrame {
 	private JPanel contentPane;
 	public static JRadioButton rdbtnYes;
 	public static JRadioButton rdbtnNo;
-	public static JTextField textField_famIllness;
-	public static JTextField textField_relationship;
+	public static String famIllness;
 
 	/**
 	 * Launch the application.
@@ -102,12 +103,44 @@ public class famMedicalHistory extends JFrame {
 		rdbtnNo.setBounds(131, 70, 91, 29);
 		panel_1.add(rdbtnNo);
 		
+		JLabel lblQ2 = new JLabel("If yes, please select the psychological illness : ");
+		lblQ2.setBounds(42, 118, 479, 29);
+		lblQ2.setForeground(SystemColor.desktop);
+		lblQ2.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		panel_1.add(lblQ2);
+		
+		JLabel lblQ3 = new JLabel("What is the relationship with you?");
+		lblQ3.setBounds(42, 217, 369, 26);
+		lblQ3.setForeground(SystemColor.desktop);
+		lblQ3.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		panel_1.add(lblQ3);
+		
+		JComboBox cmBox_famIllness = new JComboBox();
+		cmBox_famIllness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		cmBox_famIllness.setBounds(42, 155, 427, 33);
+		panel_1.add(cmBox_famIllness);
+		cmBox_famIllness.setEnabled(false);
+		
+		JComboBox cmBox_relationship = new JComboBox();
+		cmBox_relationship.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		cmBox_relationship.setBounds(42, 249, 427, 33);
+		panel_1.add(cmBox_relationship);
+		cmBox_relationship.setEnabled(false);
+		
 		rdbtnYes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnYes.isSelected()) {
 					rdbtnNo.setSelected(false);
-					textField_famIllness.setEditable(true);
-					textField_relationship.setEditable(true);
+					cmBox_famIllness.setEnabled(true);
+					cmBox_relationship.setEnabled(true);
+					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Anxiety", "Obssesive-Compulsive Disorder", "Depression", "Schizophrenia", "Antisocial Personality Disorder"}));
+					cmBox_relationship.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Father", "Mother", "Aunt", "Uncle", "Grandmother", "Grandfather"}));
+				}
+				else {
+					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_famIllness.setEnabled(false);
+					cmBox_relationship.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_relationship.setEnabled(false);
 				}
 			}
 		});
@@ -116,40 +149,19 @@ public class famMedicalHistory extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNo.isSelected()) {
 					rdbtnYes.setSelected(false);
-					textField_famIllness.setEditable(false);
-					textField_relationship.setEditable(false);
-					textField_famIllness.setText("");
-					textField_relationship.setText("");
+					cmBox_famIllness.setEnabled(false);
+					cmBox_relationship.setEnabled(false);
+					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_relationship.setModel(new DefaultComboBoxModel(new String[] {""}));
+				}
+				else {
+					cmBox_famIllness.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_famIllness.setEnabled(false);
+					cmBox_relationship.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_relationship.setEnabled(false);
 				}
 			}
 		});
-		
-		JLabel lblQ2 = new JLabel("If yes, please state the psychological illness : ");
-		lblQ2.setBounds(42, 118, 479, 29);
-		lblQ2.setForeground(SystemColor.desktop);
-		lblQ2.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		panel_1.add(lblQ2);
-		
-		textField_famIllness = new JTextField();
-		textField_famIllness.setBackground(new Color(245, 255, 250));
-		textField_famIllness.setBounds(41, 159, 604, 29);
-		textField_famIllness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		textField_famIllness.setColumns(10);
-		panel_1.add(textField_famIllness);
-		
-		JLabel lblQ3 = new JLabel("What is your relationship with him/her?");
-		lblQ3.setBounds(42, 217, 369, 26);
-		lblQ3.setForeground(SystemColor.desktop);
-		lblQ3.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		panel_1.add(lblQ3);
-		
-		textField_relationship = new JTextField();
-		textField_relationship.setBackground(new Color(245, 255, 250));
-		textField_relationship.setBounds(42, 248, 603, 29);
-		textField_relationship.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		textField_relationship.setColumns(10);
-		panel_1.add(textField_relationship);
-		
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBackground(new Color(255, 240, 245));
@@ -172,6 +184,7 @@ public class famMedicalHistory extends JFrame {
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				famIllness = cmBox_famIllness.getSelectedItem().toString();
 				symptoms.anxietySymptoms frame = new symptoms.anxietySymptoms();
 				frame.setModalExclusionType(null);
 				frame.setVisible(true);
@@ -179,5 +192,4 @@ public class famMedicalHistory extends JFrame {
 			}
 		});
 	}
-
 }

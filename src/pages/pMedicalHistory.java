@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,13 +19,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
+import javax.swing.JComboBox;
 
 public class pMedicalHistory extends JFrame {
 
 	private JPanel contentPane;
 	public static JRadioButton rdbtnYes;
 	public static JRadioButton rdbtnNo;
-	public static JTextField textField_illness;
+	public static String pIllness;
 
 	/**
 	 * Launch the application.
@@ -101,11 +103,28 @@ public class pMedicalHistory extends JFrame {
 		rdbtnNo.setBounds(131, 80, 91, 29);
 		panel_1.add(rdbtnNo);
 		
+		JLabel lblQ2 = new JLabel("If yes, please select the psychological illness : ");
+		lblQ2.setBounds(43, 130, 479, 29);
+		lblQ2.setForeground(SystemColor.desktop);
+		lblQ2.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		panel_1.add(lblQ2);
+		
+		JComboBox cmBox_illness = new JComboBox();
+		cmBox_illness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		cmBox_illness.setBounds(43, 175, 427, 29);
+		panel_1.add(cmBox_illness);
+		cmBox_illness.setEnabled(false);
+		
 		rdbtnYes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnYes.isSelected()) {
 					rdbtnNo.setSelected(false);
-					textField_illness.setEditable(true);
+					cmBox_illness.setEnabled(true);
+					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Anxiety", "Obssesive-Compulsive Disorder", "Depression", "Schizophrenia", "Antisocial Personality Disorder"}));
+				}
+				else {
+					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_illness.setEnabled(false);
 				}
 			}
 		});
@@ -114,25 +133,16 @@ public class pMedicalHistory extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(rdbtnNo.isSelected()) {
 					rdbtnYes.setSelected(false);
-					textField_illness.setEditable(false);
-					textField_illness.setText("");
+					cmBox_illness.setEnabled(false);
+					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {""}));
+				}
+				else {
+					cmBox_illness.setModel(new DefaultComboBoxModel(new String[] {""}));
+					cmBox_illness.setEnabled(false);
 				}
 			}
 		});
-		
-		JLabel lblQ2 = new JLabel("If yes, please state the psychological illness : ");
-		lblQ2.setBounds(43, 130, 479, 29);
-		lblQ2.setForeground(SystemColor.desktop);
-		lblQ2.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		panel_1.add(lblQ2);
-		
-		textField_illness = new JTextField();
-		textField_illness.setBackground(new Color(245, 255, 250));
-		textField_illness.setBounds(43, 176, 479, 29);
-		textField_illness.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		textField_illness.setColumns(10);
-		panel_1.add(textField_illness);
-		
+
 		JButton btnBack = new JButton("Back");
 		btnBack.setBackground(new Color(255, 240, 245));
 		btnBack.setFont(new Font("Yu Gothic UI", Font.BOLD, 16));
@@ -154,6 +164,7 @@ public class pMedicalHistory extends JFrame {
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				pIllness = cmBox_illness.getSelectedItem().toString();
 				famMedicalHistory frame = new famMedicalHistory();
 				frame.setModalExclusionType(null);
 				frame.setVisible(true);

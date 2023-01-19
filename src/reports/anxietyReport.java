@@ -103,18 +103,18 @@ public class anxietyReport extends JFrame {
 		}
 		
 		JTextArea txtrReport = new JTextArea();
-		txtrReport.setBounds(136, 114, 665, 351);
+		txtrReport.setBounds(93, 114, 753, 351);
 		panel.add(txtrReport);
 		txtrReport.setFont(new Font("Yu Gothic UI", Font.PLAIN, 17));
 		txtrReport.setText("\t\tPatient's Information"
 				+ "\r\n\nName: Mr./Ms. " + pages.personalInfo.textField_name.getText()
 				+ "\r\nPhone no: " + pages.personalInfo.textField_phone.getText()
-				+ "\r\nAge: " + pages.personalInfo.textField_age.getText()
+				+ "\r\nAge: " + pages.personalInfo.age
 				+ "\r\nGender: " + pGender
-				+ "\r\nOccupation: " + pages.personalInfo.textField_occupation.getText()
-				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + pages.pMedicalHistory.textField_illness.getText()
-				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.textField_famIllness.getText()
-				+ "\r\n----------------------------------------------------------------------------------------------"
+				+ "\r\nOccupation: " + pages.personalInfo.occupation
+				+ "\r\nDoes the patient have a history of psychological disorders? " + pHistory + pages.pMedicalHistory.pIllness
+				+ "\r\nDoes the patient's family have a psychological disorder? " + pFamHistory + pages.famMedicalHistory.famIllness
+				+ "\r\n-----------------------------------------------------------------------------------------------------------"
 				+ "\r\n\t\t    Diagnostic Result"
 				+ "\r\n\nPatient's psychological disorder: Anxiety"
 				+ "\r\nTreatments: Psychotherapy, Medication, Complementary therapy\r\n");
@@ -134,7 +134,6 @@ public class anxietyReport extends JFrame {
 				}
 			}
 		});
-		
 		
 		JButton btnDiagnose = new JButton("Diagnose Again");
 		btnDiagnose.setBackground(new Color(255, 240, 245));

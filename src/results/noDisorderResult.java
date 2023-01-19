@@ -121,7 +121,8 @@ public class noDisorderResult extends JFrame {
 		panel.add(btnHow);
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "The system diagnoses you as not having a psychological disorder based on the symptoms you selected.");
+				JOptionPane.showMessageDialog(null, "The system diagnoses you as not having a psychological disorder based on the symptoms you selected."
+													+"\nThe selected symptoms do not constitute any psychological disorder.");
 			}
 		});
 		

@@ -130,7 +130,8 @@ public class anxietyResult extends JFrame {
 		btnHow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "The system diagnoses your psychological disorder based on the following symptoms:\n" 
-													+ symptoms.anxietySymptoms.symptomsList);
+													+ symptoms.anxietySymptoms.symptomsList
+													+"\n\nThese are the symptoms that constitute Anxiety.");
 			}
 		});
 		

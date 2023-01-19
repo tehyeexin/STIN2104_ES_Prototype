@@ -26,14 +26,15 @@ import javax.swing.JScrollBar;
 import javax.swing.JSlider;
 import javax.swing.JComboBox;
 import java.awt.SystemColor;
+import javax.swing.JSeparator;
 
 public class personalInfo extends JFrame {
 
 	private JPanel contentPane;
 	public static JTextField textField_name;
 	public static JTextField textField_phone;
-	public static JTextField textField_age;
-	public static JTextField textField_occupation;
+	public static Integer age;
+	public static String occupation;
 	public static JRadioButton rdbtnMale;
 	public static JRadioButton rdbtnFemale;
 
@@ -124,12 +125,10 @@ public class personalInfo extends JFrame {
 		lblAge.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel_1.add(lblAge);
 		
-		textField_age = new JTextField();
-		textField_age.setBackground(new Color(245, 255, 250));
-		textField_age.setBounds(142, 145, 528, 29);
-		textField_age.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		textField_age.setColumns(10);
-		panel_1.add(textField_age);
+		JSpinner spinner = new JSpinner();
+		spinner.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		spinner.setBounds(142, 149, 89, 29);
+		panel_1.add(spinner);
 		
 		JLabel lblGender = new JLabel("Gender");
 		lblGender.setBounds(27, 201, 89, 26);
@@ -173,12 +172,11 @@ public class personalInfo extends JFrame {
 		lblOccupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel_1.add(lblOccupation);
 		
-		textField_occupation = new JTextField();
-		textField_occupation.setBackground(new Color(245, 255, 250));
-		textField_occupation.setBounds(142, 257, 528, 29);
-		textField_occupation.setColumns(10);
-		textField_occupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		panel_1.add(textField_occupation);
+		JComboBox cmBox_occupation = new JComboBox();
+		cmBox_occupation.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		cmBox_occupation.setBounds(142, 258, 528, 29);
+		panel_1.add(cmBox_occupation);
+		cmBox_occupation.setModel(new DefaultComboBoxModel(new String[] {"Select...", "Professional", "Government Service / Public Sector", "Private Sector Service", "Business", "Housewife", "Student", "Retired", "Self-employed", "Unemployed"}));
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBackground(new Color(255, 240, 245));
@@ -201,6 +199,8 @@ public class personalInfo extends JFrame {
 		panel.add(btnNext);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				age = (Integer)spinner.getValue();
+				occupation = cmBox_occupation.getSelectedItem().toString();
 				pMedicalHistory frame = new pMedicalHistory();
 				frame.setModalExclusionType(null);
 				frame.setVisible(true);
